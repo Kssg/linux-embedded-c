@@ -58,3 +58,29 @@ typedef struct Node {
 最後把 10 個數字都印出來。
 
 ---
+
+## Day 5 - Stack & Queue
+>✅[time=Fri, Sep 26, 2025 12:21 AM]
+*   用陣列實作 Stack (push/pop)
+*   用 linked list 實作 Queue (enqueue/dequeue)
+
+👉 練習題：  
+寫一個程式，讀取一串字串，檢查括號是否正確配對（用 stack）。
+
+- 在 C 語言裡要如何用結構體實做出 Stack?
+- 不能使用變數來初始化陣列
+```c
+int size = 10;
+int arr[size];
+// 用 macro 就可以，記得 define 後面沒有分號
+#define size 10
+int arr[size];
+```
+- macro 可以計算嗎？不行：size = 10 -> 10 = 10; // 編譯錯誤
+- 用 array 來實做會遇到大小不夠的問題：用 stack 就是在固定的範圍內增減，queue 會有頭尾問題
+- 我把 stack 的 top 想成 queue 的 front 了
+- 0 ~ capacity-1 所以是 capacity 個沒錯
+- linked list 的初始化是如何？會有值嗎？寫在 malloc 裡
+- enqueue dequeue 的行為我完全亂掉
+- struct 內成員的初始值：在 C 語言裡 不會自動預設為 NULL，必須自己設定，例如 q->next = NULL;
+- 怎麼才能真的改到外部指標？必須傳指標的位址（也就是「二重指標」）
