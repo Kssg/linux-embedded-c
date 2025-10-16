@@ -84,3 +84,24 @@ int arr[size];
 - enqueue dequeue 的行為我完全亂掉
 - struct 內成員的初始值：在 C 語言裡 不會自動預設為 NULL，必須自己設定，例如 q->next = NULL;
 - 怎麼才能真的改到外部指標？必須傳指標的位址（也就是「二重指標」）
+
+---
+
+
+## Day 6 – 小專案整合
+>✅[time=Tsu, Oct 16, 2025 03:06 PM]
+
+*   寫一個小專案：  
+    **學生管理系統 (Student Manager)**
+    *   用 linked list 儲存學生資料（id, name, score）
+    *   提供功能：新增、刪除、列印
+
+👉 這會是一個可以放 GitHub 的 mini project。
+
+- array type is not assignable: 用 strncpy()
+- 刪除頭節點一直會出現阿！用間接指標
+- 要如何建立 linked list 比較好？
+- 已經 scanf 過後就不會再叫你 scanf? scanf 只能包含格式字串，不能混入提示文字
+- switch case 沒有 break 會造成 case 貫穿
+- C 不允許在 switch 的 case 之後直接宣告變數（會造成語法錯誤或行為不明確）
+- 輸入緩衝區改良：`scanf("%s", name)` 容易出錯，改用 `fgets()` 或 `scanf(" %99[^\n]", name)`（讀整行字串）
