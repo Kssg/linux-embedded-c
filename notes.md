@@ -105,3 +105,19 @@ int arr[size];
 - switch case 沒有 break 會造成 case 貫穿
 - C 不允許在 switch 的 case 之後直接宣告變數（會造成語法錯誤或行為不明確）
 - 輸入緩衝區改良：`scanf("%s", name)` 容易出錯，改用 `fgets()` 或 `scanf(" %99[^\n]", name)`（讀整行字串）
+
+### Day 7 – 複習 & 挑戰
+>✅[time=Sun, Oct 27, 2025 10:43 PM]
+
+*   複習本週程式
+*   使用 `gdb` debug 錯誤
+*   使用 `valgrind` 檢查記憶體
+
+👉 挑戰題：  
+寫一個程式，模擬簡單的銀行帳戶系統：
+
+*   `deposit()`、`withdraw()`
+*   紀錄交易紀錄（linked list）
+
+- free() 之後的指標指向 NULL，避免懸掛指標
+- 合併重複的部份成共用函式
