@@ -1,5 +1,4 @@
 #include <stdio.h>
-#include <stdlib.h>
 #include <string.h>
 #include "student.h"
 
@@ -23,6 +22,14 @@ int main() {
                 int id, score;
                 char name[100];
                 printf("ID: "); scanf("%d", &id);
+                if (id == 0) {
+                    printf("Input is not integer, please try again.\n");
+                    int ch;
+                    while ((ch = getchar()) != '\n' && ch != EOF) { }
+                } else {
+                    printf("Input error.\n");
+                }
+                    
                 // scanf 不會吃掉 \n
                 getchar();
                 // 原本方式
